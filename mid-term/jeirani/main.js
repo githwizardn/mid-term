@@ -1,22 +1,18 @@
-function playGame() {
-  // არჩევა
-  var userChoice = prompt("აირჩიე ქვა,ქაღალდი ან მაკრატელი:");
+// არჩევა
+const userChoice = prompt("აირჩიე ქვა,ქაღალდი ან მაკრატელი:");
 
-  // არჩევნის შემოწმება
-  if (
-    userChoice !== "ქვა" &&
-    userChoice !== "ქაღალდი" &&
-    userChoice !== "მაკრატელი"
-  ) {
-    alert("გთხოვთ შეიყვანოთ ზუსტად ისე როგორც ნაჩვენებია ");
-    console.log("გთხოვთ შეიყვანოთ ზუსტად ისე როგორც ნაჩვენებია ");
-
-    return; // ფუნქცის დახურვა თუ არასწორადაა შეყვანილი არჩევანი
-  }
-
+// არჩევნის შემოწმება
+if (
+  userChoice !== "ქვა" &&
+  userChoice !== "ქაღალდი" &&
+  userChoice !== "მაკრატელი"
+) {
+  alert("გთხოვთ შეიყვანოთ ზუსტად ისე როგორც ნაჩვენებია ");
+  console.log("გთხოვთ შეიყვანოთ ზუსტად ისე როგორც ნაჩვენებია ");
+} else {
   // კომპიუტერის არჩევნის გენერირება
-  var choices = ["ქვა", "ქაღალდი", "მაკრატელი"];
-  var computerChoice = choices[Math.floor(Math.random() * 3)];
+  const choices = ["ქვა", "ქაღალდი", "მაკრატელი"];
+  const computerChoice = choices[Math.floor(Math.random() * 3)];
 
   // არჩეევნის გამოცხადება
   alert(
@@ -42,6 +38,3 @@ function playGame() {
     console.log("კომპპიუტერმა მოიგო!");
   }
 }
-
-// თამაშის დაწყება
-playGame();
